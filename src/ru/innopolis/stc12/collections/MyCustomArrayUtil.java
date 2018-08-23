@@ -18,12 +18,11 @@ public class MyCustomArrayUtil {
         for (int k = 0; k < size; k++) {
             rnd = rand.nextInt(size * 10);
 
-            //Loop for when there number is already chosen
+            //цикл на случай если число уже есть такое
             while (check[rnd]) {
                 rnd = rand.nextInt(size);
-
             }
-            //Sets the random unique number to a slot in the array
+            //Устанавливает рандомное число в слот
             nums[k] = rnd;
             check[rnd] = true;
 
@@ -50,7 +49,7 @@ public class MyCustomArrayUtil {
      * Метод проверяет массив на уникальность элементов. Иначе кидает эксепшен, который мы в мейне отлавливаем
      *
      * @param arr - массив для проверки
-     * @throws Exception
+     * @throws Exception Предупреждение о том, что в массиве присутствует неуникальный элемент и он выводится после двоеточия
      */
     public static void arrayUniqueChecker(int[] arr) throws Exception {
         Set<Integer> foundNumbers = new HashSet<Integer>();
@@ -66,7 +65,7 @@ public class MyCustomArrayUtil {
      * Метод проверяет массив на уникальность элементов. Иначе кидает эксепшен, который мы в мейне отлавливаем
      *
      * @param list - массив для проверки
-     * @throws Exception
+     * @throws Exception Предупреждение о том, что в массиве присутствует неуникальный элемент и он выводится после двоеточия
      */
     public static void arrayUniqueChecker(List<Integer> list) throws Exception {
         Set<Integer> foundNumbers = new HashSet<Integer>();
