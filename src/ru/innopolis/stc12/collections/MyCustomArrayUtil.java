@@ -1,11 +1,8 @@
 package ru.innopolis.stc12.collections;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
-public class ArrayUtil {
+public class MyCustomArrayUtil {
     /**
      * Генератор массива с уникальными значениями
      *
@@ -35,6 +32,21 @@ public class ArrayUtil {
         return nums;
     }
 
+    public static List<Integer> generateArrayList(int n) {
+        List<Integer> arrayRandom = new ArrayList<Integer>(n);
+
+        Random rand = new Random();
+        for (int i=0; i<n; i++)
+        {
+            Integer r = rand.nextInt(100) ;
+            while(arrayRandom.contains(r)){
+                r=rand.nextInt(100);
+            }
+            arrayRandom.add(r);
+        }
+        return arrayRandom;
+    }
+
     /**
      * Метод проверяет массив на уникальность элементов. Иначе кидает эксепшен, который мы в мейне отлавливаем
      *
@@ -45,7 +57,22 @@ public class ArrayUtil {
         Set<Integer> foundNumbers = new HashSet<Integer>();
         for (int num : arr) {
             if (foundNumbers.contains(num)) {
-                throw new Exception("not unique");
+                throw new Exception("not unique number:" + num);
+            }
+            foundNumbers.add(num);
+        }
+    }
+    /**
+     * Метод проверяет массив на уникальность элементов. Иначе кидает эксепшен, который мы в мейне отлавливаем
+     *
+     * @param list - массив для проверки
+     * @throws Exception
+     */
+    public static void arrayUniqueChecker(List<Integer> list) throws Exception {
+        Set<Integer> foundNumbers = new HashSet<Integer>();
+        for (int num : list) {
+            if (foundNumbers.contains(num)) {
+                throw new Exception("not unique " + num);
             }
             foundNumbers.add(num);
         }

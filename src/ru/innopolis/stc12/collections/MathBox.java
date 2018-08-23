@@ -16,6 +16,10 @@ public class MathBox {
         this.enterSet = new TreeSet<Integer>(list);
     }
 
+    public MathBox(List<Integer> list) {
+        this.enterSet = new TreeSet<Integer>(list);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
