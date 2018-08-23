@@ -1,7 +1,6 @@
 package ru.innopolis.stc12.collections;
 
 
-
 import java.util.List;
 
 
@@ -9,14 +8,19 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int size = 20;
+        int size = 5;
         solutionViaArray(size);
         System.out.println("---------------------------------");
         solutionViaArrayList(size);
 
     }
 
-    public static void solutionViaArray(int size){
+    /**
+     * Решение через обычный массив array[]
+     *
+     * @param size размер массива
+     */
+    public static void solutionViaArray(int size) {
         int[] inputNumbers = MyCustomArrayUtil.generateArray(size);
         //int[] inputNumbers = {10,10,34,36,17}; //для проверки дублей
 
@@ -27,7 +31,7 @@ public class Main {
         }
         Integer[] inputArray = MyCustomArrayUtil.intArrayToIntegerConverter(inputNumbers);
 
-        System.out.println("Выводим нагенерённый массив размером " + inputArray.length+ " элементов: ");
+        System.out.println("Выводим нагенерённый массив размером " + inputArray.length + " элементов: ");
         for (int i : inputArray) {
             System.out.print(i + " ");
         }
@@ -46,9 +50,14 @@ public class Main {
         System.out.println(mathBox.predator(10));
     }
 
-    public static void solutionViaArrayList(int size ){
+    /**
+     * решение через списочный массив ArrayList
+     *
+     * @param size размер массива
+     */
+    public static void solutionViaArrayList(int size) {
         List<Integer> list = MyCustomArrayUtil.generateArrayList(size);
-        System.out.println("Выводим нагенерённый списочный массив размером " + list.size()+ " элементов: ");
+        System.out.println("Выводим нагенерённый списочный массив размером " + list.size() + " элементов: ");
         for (int i : list) {
             System.out.print(i + " ");
         }

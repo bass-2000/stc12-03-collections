@@ -1,6 +1,9 @@
 package ru.innopolis.stc12.collections;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.TreeSet;
 
 public class MathBox {
     private TreeSet<Integer> enterSet;

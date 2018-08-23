@@ -36,11 +36,10 @@ public class MyCustomArrayUtil {
         List<Integer> arrayRandom = new ArrayList<Integer>(n);
 
         Random rand = new Random();
-        for (int i=0; i<n; i++)
-        {
-            Integer r = rand.nextInt(100) ;
-            while(arrayRandom.contains(r)){
-                r=rand.nextInt(100);
+        for (int i = 0; i < n; i++) {
+            Integer r = rand.nextInt(100);
+            while (arrayRandom.contains(r)) {
+                r = rand.nextInt(100);
             }
             arrayRandom.add(r);
         }
@@ -62,6 +61,7 @@ public class MyCustomArrayUtil {
             foundNumbers.add(num);
         }
     }
+
     /**
      * Метод проверяет массив на уникальность элементов. Иначе кидает эксепшен, который мы в мейне отлавливаем
      *
@@ -80,6 +80,7 @@ public class MyCustomArrayUtil {
 
     /**
      * Конвентрирует int[] массив в Integer[] массив
+     *
      * @param arr int[] массив
      * @return Integer[] массив
      */
