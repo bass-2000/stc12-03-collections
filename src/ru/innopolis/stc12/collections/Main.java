@@ -7,8 +7,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int size = 2;   //размер массива
-        //int[] inputNumbers = ArrayUtil.generateArray(size);
-        int[] inputNumbers = {10,10,34,36,17}; //для проверки дублей
+        int[] inputNumbers = ArrayUtil.generateArray(size);
+        //int[] inputNumbers = {10,10,34,36,17}; //для проверки дублей
 
         try {
             ArrayUtil.arrayUniqueChecker(inputNumbers);
